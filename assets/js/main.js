@@ -46,11 +46,24 @@ if (selectedTheme) {
   );
 }
 
+window.addEventListener("load", changeImageSrc);
+
+function changeImageSrc() {
+  const img = document.getElementById("nav_logo");
+  const prefersDark = getCurrentTheme() === "dark";
+  if (prefersDark) {
+    img.src = "assets/img/logo_dark.png";
+  } else {
+    img.src = img.dataset.src;
+  }
+}
+
 themeButton.addEventListener("click", () => {
   document.body.classList.toggle(darkTheme);
   themeButton.classList.toggle(iconTheme);
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
+  changeImageSrc();
 });
 
 function scrollTop() {

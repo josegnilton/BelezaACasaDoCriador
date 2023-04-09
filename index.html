@@ -19,7 +19,7 @@
 
   <header class="l-header" id="header">
     <nav class="nav bd-container">
-      <a href="#" class="nav_logo">Beleza - A Casa do Criador</a>
+      <a href="#" class="nav_logo"> <img id="nav_logo" src="assets/img/logo_dark.png" data-src="assets/img/logo_white.png" alt="logo"/></a>
 
       <div class="nav_menu" id="nav-menu">
         <ul class="nav_list">
@@ -33,7 +33,10 @@
             <a href="#services" class="nav_link">Nossos Produtos</a>
           </li>
           <li class="nav_item">
-            <a href="#apps" class="nav_link">Precisa de ajuda?</a>
+            <a href="#social_media" class="nav_link">Redes Sociais</a>
+          </li>
+          <li class="nav_item">
+            <a href="#location" class="nav_link">Localização</a>
           </li>
           <li class="nav_item">
             <a href="#contact" class="nav_link">Fale Conosco</a>
@@ -116,44 +119,44 @@
           </p>
         </div>
       </div>
-    </section>
 
-    <section class="menu section bd-container" id="apps">
-      <span class="section-subtitle">Mais vendidos</span>
       <h2 class="section-title">O que os tutores mais querem</h2>
-
       <div class="menu_container bd-grid">
-        <div class="menu_content">
-          <img src="assets/img/racao-para-animais.png" alt="" class="menu_img" />
-          <h3 class="menu_name">Ração</h3>
-          <span class="menu_detail">O melhor para a barriga dos seus pets</span>
-          <span class="menu_preci">a partir de R$ 2,00/kg</span>
-          <a href="#" class="button menu_button"><i class="bx bxs-cart"></i></a>
-        </div>
-
-        <div class="menu_content">
-          <img src="assets/img/shampoo-pet.png" alt="" class="menu_img" />
-          <h3 class="menu_name">Produtos de Higiene</h3>
-          <span class="menu_detail">Tudo para deixar seu pet lindo e cheiroso</span>
-          <span class="menu_preci">a partir de R$ 6,00 </span>
-          <a href="#" class="button menu_button"><i class="bx bxs-cart"></i></a>
-        </div>
-
-        <div class="menu_content">
-          <img src="assets/img/remedio.png" alt="" class="menu_img" />
-          <h3 class="menu_name">Remédios e Vitaminas</h3>
-          <span class="menu_detail">Ajudando veterinários a curar seus melhores amigos</span>
-          <span class="menu_preci">a partir de R$12,00</span>
-          <a href="#" class="button menu_button"><i class="bx bxs-cart"></i></a>
-        </div>
+        <a href="#" style="cursor: pointer;">
+          <div class="menu_content">
+            <img src="assets/img/pet-food.png" alt="" class="menu_img" />
+            <h3 class="menu_name">Ração</h3>
+            <span class="menu_detail">O melhor para a barriga dos seus pets</span>
+            <span class="menu_preci">a partir de R$ 2,00/kg</span>
+          </div>
+        </a>
+        <a href="#" style="cursor: pointer;">
+          <div class="menu_content">
+            <img src="assets/img/shampoo.png" alt="" class="menu_img" />
+            <h3 class="menu_name">Produtos de Higiene</h3>
+            <span class="menu_detail">Tudo para deixar seu pet lindo e cheiroso</span>
+            <span class="menu_preci">a partir de R$ 6,00 </span>
+          </div>
+        </a>
+        <a href="#" style="cursor: pointer;">
+          <div class="menu_content">
+            <img src="assets/img/medication.png" alt="" class="menu_img" />
+            <h3 class="menu_name">Remédios e Vitaminas</h3>
+            <span class="menu_detail">Ajudando veterinários a curar seus melhores amigos</span>
+            <span class="menu_preci">a partir de R$12,00</span>
+          </div>
+        </a>
       </div>
+
     </section>
+
 
     <div style="text-align: center;">
-      <a href="https://contate.me/auto-escola-veja"  style="margin: 0 auto;" target="_blank" class="button">Confira mais produtos aqui</a>
+      <a href="https://contate.me/auto-escola-veja" style="margin: 0 auto;" target="_blank" class="button">Confira mais
+        produtos aqui</a>
     </div>
 
-    <section class="app section bd-container">
+    <section class="app section bd-container" id="social_media">
       <div class="app_container bd-grid">
         <div class="app_data">
           <span class="section-subtitle app_initial">Redes Sociais</span>
@@ -163,7 +166,8 @@
             nossas promoções relâmpago!
           </p>
           <div class="social_media">
-            <a href="https://www.instagram.com/belezacasadocriador"><i class="bx bxl-instagram" class="app_icon"></i></a>
+            <a href="https://www.instagram.com/belezacasadocriador"><i class="bx bxl-instagram"
+                class="app_icon"></i></a>
           </div>
         </div>
 
@@ -171,7 +175,7 @@
       </div>
     </section>
 
-    <section class="services section bd-container" id="services">
+    <section class="services section bd-container" id="location">
       <span class="map_title section-subtitle">Localização</span>
       <h2 class="section-title">
         Saiba onde nos encontrar
@@ -207,7 +211,7 @@
               <label class="contact_label" for="mensagem">Mensagem:</label>
               <textarea class="contact_textarea" id="mensagem" rows="3" name="mensagem" required></textarea>
 
-              <input class="contact_button" type="submit" value="Enviar">
+              <input class="contact_button button" type="submit" value="Enviar">
             </form>
           </section>
         </div>
@@ -265,5 +269,9 @@
   <script src="assets/js/main.js"></script>
 </body>
 <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+
+
+</script>
 
 </html>

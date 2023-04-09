@@ -36,7 +36,7 @@ img {
     --header-height: 3rem;
 
     --primary-color: #eb5401;
-    --primary-color-alt: #eb5401;
+    --primary-color-alt: #f27b3a;
     --title-color: #222;
     --text-color: #141414;
     --text-color-light: #a6a6a6;
@@ -120,16 +120,14 @@ body {
 }
 
 .nav_link,
-.nav_logo,
 .nav_toggle {
     color: var(--text-color);
     font-weight: var(--font-medium);
 }
-
-.nav_logo:hover {
-    color: var(--primary-color);
+.nav_logo{
+    width: 120px;
+    padding-top: 10px;
 }
-
 .show-menu {
     top: var(--header-height);
 }
@@ -323,6 +321,11 @@ body.dark-theme {
     border-radius: 99em;
     box-shadow: 0 2px 4px rgba(3, 74, 40, 0.15);
     padding: 3.75rem 0.75rem;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+.menu_content:hover {
+    transform: scale(1.10)!important;
 }
 
 .menu_img {
@@ -345,6 +348,7 @@ body.dark-theme {
 .menu_detail,
 .menu_preci {
     font-size: var(--small-font-size);
+    color: var(--text-color)!important;
     text-align: center;
 }
 
