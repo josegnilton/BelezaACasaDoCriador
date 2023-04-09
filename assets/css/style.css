@@ -480,17 +480,17 @@ body.dark-theme {
     border-radius: 10px;
 }
 
-.contact__title {
+.contact_title {
     margin-top: 0;
 }
 
-.contact__label {
+.contact_label {
     display: block;
     margin-bottom: 5px;
 }
 
-.contact__input,
-.contact__textarea {
+.contact_input,
+.contact_textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -498,7 +498,7 @@ body.dark-theme {
     margin-bottom: 10px;
 }
 
-.contact__button {
+.contact_button {
     background-color: var(--primary-color);
     color: #fff;
     border: none;
