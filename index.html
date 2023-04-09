@@ -9,7 +9,12 @@
 
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/responsiveWeb.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" />
+
   <title>Beleza - A Casa do Criador</title>
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
 </head>
 
 <body>
@@ -19,7 +24,8 @@
 
   <header class="l-header" id="header">
     <nav class="nav bd-container">
-      <a href="#" class="nav_logo"> <img id="nav_logo" src="assets/img/logo_dark.png" data-src="assets/img/logo_white.png" alt="logo"/></a>
+      <a href="#" class="nav_logo"> <img id="nav_logo" src="assets/img/logo_dark.png"
+          data-src="assets/img/logo_white.png" alt="logo" /></a>
 
       <div class="nav_menu" id="nav-menu">
         <ul class="nav_list">
@@ -53,18 +59,14 @@
   </header>
 
   <main class="l-main">
-    <section class="home" id="home">
-      <div class="home_container bd-container bd-grid">
-        <div class="home_data">
-          <h1 class="home_title">Produtos de qualidade e com preço baixo!</h1>
-          <h2 class="home_subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis ante nunc, in tempus dui imperdiet
-            vitae.
-          </h2>
-          <a href="https://contate.me/auto-escola-veja" target="_blank" class="button">Tire aqui suas dúvidas!</a>
-        </div>
-
-        <img src="assets/img/petshop-header.jpg" alt="" style="border-radius: 10px;" class="home_img" />
+    <section class="home" id="home" style="padding-top: 60px;">
+      <div class="carousel">
+        <div><img id="minha-imagem_1" src="assets/img/1.png" data-src="assets/img/4.png"
+            alt="Imagem do carrossel com detalhes sobre a loja"></div>
+        <div><img id="minha-imagem_2" src="assets/img/2.png" data-src="assets/img/5.png"
+            alt="Imagem do carrossel com detalhes sobre a loja"></div>
+        <div><img id="minha-imagem_3" src="assets/img/3.png" data-src="assets/img/6.png"
+            alt="Imagem do carrossel com detalhes sobre a loja"></div>
       </div>
     </section>
 
@@ -120,7 +122,7 @@
         </div>
       </div>
 
-      <h2 class="section-title">O que os tutores mais querem</h2>
+      <h2 class="section-title" style="padding-top: 10px;">O que os tutores mais querem</h2>
       <div class="menu_container bd-grid">
         <a href="#" style="cursor: pointer;">
           <div class="menu_content">
@@ -156,22 +158,22 @@
         produtos aqui</a>
     </div>
 
-    <section class="app section bd-container" id="social_media">
-      <div class="app_container bd-grid">
-        <div class="app_data">
-          <span class="section-subtitle app_initial">Redes Sociais</span>
-          <h2 class="section-title app_initial">Nos encontre nas redes sociais!</h2>
-          <p class="app_description">
+    <section class="social_media section bd-container" id="social_media">
+      <div class="social_media_container bd-grid">
+        <div class="social_media_data">
+          <span class="section-subtitle social_media_initial">Redes Sociais</span>
+          <h2 class="section-title social_media_initial">Nos encontre nas redes sociais!</h2>
+          <p class="social_media_description">
             Postamos um conteúdo bem divertido e interativo no Instagram, confira e aproveite
             nossas promoções relâmpago!
           </p>
           <div class="social_media">
             <a href="https://www.instagram.com/belezacasadocriador"><i class="bx bxl-instagram"
-                class="app_icon"></i></a>
+                class="social_media_icon"></i></a>
           </div>
         </div>
 
-        <img src="assets/img/socialmediapet.PNG" alt="" class="app__img" />
+        <img src="assets/img/socialmediapet.PNG" alt="" class="social_media__img" />
       </div>
     </section>
 
@@ -263,15 +265,36 @@
       </p>
     </footer>
   </main>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
-
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('.carousel').slick({
+        autoplay: true,
+        autoplaySpeed: 5000,
+        dots: true,
+        responsive: [
+          {
+            breakpoint: 900,
+            settings: {
+              arrows: false
+            }
+          }
+        ]
+      });
+    });
+
+    AOS.init({
+      once: true,
+      delay: 100,
+    });
+
+  </script>
 </body>
-<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-<script>
 
-
-</script>
 
 </html>

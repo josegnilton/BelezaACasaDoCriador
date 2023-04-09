@@ -1,3 +1,5 @@
+// ------------------------------ Início Função para Scroll do Header ------------------------------
+
 function scrollHeader() {
   const nav = document.getElementById("header");
   if (this.scrollY >= 200) nav.classList.add("scroll-header");
@@ -5,6 +7,9 @@ function scrollHeader() {
 }
 window.addEventListener("scroll", scrollHeader);
 
+// ------------------------------ Fim Função para Scroll do Header ------------------------------
+
+// ------------------------------ Início Função para explosão da Navbar ------------------------------
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId);
@@ -16,7 +21,9 @@ const showMenu = (toggleId, navId) => {
   }
 };
 showMenu("nav-toggle", "nav-menu");
+// ------------------------------ Fim Função para explosão da Navbar ------------------------------
 
+// ------------------------------ Início Função para controlar o action dos links ------------------------------
 const navLink = document.querySelectorAll(".nav_link");
 
 function linkAction() {
@@ -24,6 +31,10 @@ function linkAction() {
   navMenu.classList.remove("show-menu");
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
+
+// ------------------------------ Fim Função para controlar o action dos links ------------------------------
+
+// ------------------------------ Início Função para controlar o tema da página ------------------------------
 
 const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
@@ -45,7 +56,6 @@ if (selectedTheme) {
     iconTheme
   );
 }
-
 window.addEventListener("load", changeImageSrc);
 
 function changeImageSrc() {
@@ -65,6 +75,10 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-icon", getCurrentIcon());
   changeImageSrc();
 });
+
+// ------------------------------ Fim Função para controlar o tema da página ------------------------------
+
+// ------------------------------ Início Função para controlar o o scroll ------------------------------
 
 function scrollTop() {
   const scrollTop = document.getElementById("scroll-top");
@@ -96,25 +110,9 @@ function scrollActive() {
 }
 window.addEventListener("scroll", scrollActive);
 
-const sr = ScrollReveal({
-  origin: "top",
-  distance: "30px",
-  duration: 2000,
-  reset: true,
-});
+// ------------------------------ Fim Função para controlar o Scroll ------------------------------
 
-sr.reveal(
-  `.home_data, .home_img,
-            .about_data, .about_img,
-            .services_content, .menu_content,
-            .app_data, .app_img,
-            .contact_data, .contact_button,
-            .footer_content`,
-  {
-    interval: 200,
-  }
-);
-
+// ------------------------------ Inicio Função para controlar o form do e-mail ------------------------------
 const form = document.querySelector("form");
 
 form.addEventListener("submit", (event) => {
@@ -142,3 +140,31 @@ form.addEventListener("submit", (event) => {
       alert("Ocorreu um erro ao enviar a mensagem.");
     });
 });
+// ------------------------------ Fim Função para controlar o form do e-mail ------------------------------
+
+// ------------------------------ Inicio Função para controlar a imagem do carrossel ------------------------------
+function changeImageCarouselSrc() {
+  const minhaImagem_1 = document.getElementById('minha-imagem_1');
+  const minhaImagem_2 = document.getElementById('minha-imagem_2');
+  const minhaImagem_3 = document.getElementById('minha-imagem_3');
+  const largura = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  if (largura < 950) {
+    minhaImagem_1.src = minhaImagem_1.dataset.src;
+    minhaImagem_2.src = minhaImagem_2.dataset.src;
+    minhaImagem_3.src = minhaImagem_3.dataset.src;
+  } else {
+    minhaImagem_1.src = 'assets/img/1.png';
+    minhaImagem_2.src = 'assets/img/2.png';
+    minhaImagem_3.src = 'assets/img/3.png';
+  }
+}
+
+window.onload = function() {
+  changeImageCarouselSrc();
+}
+
+window.addEventListener('resize', function() {
+  changeImageCarouselSrc();
+});
+
+// ------------------------------ Fim Função para controlar a imagem do carrossel ------------------------------

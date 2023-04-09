@@ -52,7 +52,7 @@
     width: 130px;
   }
 
-  .app_icon {
+  .social_media_icon {
     margin: 0 var(--mb-1) 0 0;
   }
 }
@@ -68,7 +68,7 @@
   }
 
   .about_container,
-  .app_container {
+  .social_media_container {
     column-gap: 7rem;
   }
 }
@@ -81,7 +81,7 @@
 @media screen and (min-width: 576px) {
   .home_container,
   .about_container,
-  .app_container {
+  .social_media_container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
@@ -89,8 +89,8 @@
 
   .about_data,
   .about_initial,
-  .app_data,
-  .app_initial,
+  .social_media_data,
+  .social_media_initial,
   .contact_container,
   .contact_initial {
     text-align: initial;
@@ -101,7 +101,7 @@
     order: -1;
   }
 
-  .app_img {
+  .social_media_img {
     width: 380px;
     order: -1;
   }
@@ -114,4 +114,19 @@
   .contact_button {
     justify-self: center;
   }
+}
+
+@media screen and (max-width: 769px) {
+  .carousel {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+
+  .carousel img {
+    width: 100%;
+    border-radius: 0px;
+  }
+
 }
