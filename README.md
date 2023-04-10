@@ -7,8 +7,10 @@ O site é de um petshop real, aproveitei a oportunidade do desafio para criar um
 # Features
 - Navbar navegável.
 - Carrossel interativo utilizando o Slick Slider como biblioteca para movimentação.
+- Imagens personalizadas tendo dimensões de 1920x600 e 650x600, mudando em javascript para atender ao tamanho da tela e melhorar a responsividade.
 - Form de e-mail funcional utilizando o FormSpree na sua versão gratuíta.
 - Página de produtos com os produtos mais vendidos.
+- Página descontraida mostrando a equipe, sendo ela formada inteiramente por bichos da família.
 - Dark Mode implementado através de Javascript e CSS, usando localstorage para guardar qual a versão a pessoa utiliza.
 - Localização geográfica pelo Google Maps.
 - Botões de direcionamento para a Api do Whats App.
@@ -32,3 +34,4 @@ O email pode ser enviado através de um formulário funciona próximo ao footer 
 # Cypress
 - Dentro da pasta cypress basta rodar o comando ```npm i``` para instalar as dependências para rodar o cypress. 
 - Após isso é possível rodar o comando ``` npx cypress open```, esse comando irá abrir o "navegador" do cypress. Basta iniciar os testes para ver a mágica acontecendo.
+- Foram testes básicos para garantir a qualidade da homepage: O teste 1 tem o objetivo de aferir se o botão do ScrollTop está funcionando. O segundo se o botão do darkMode está funcionando e o terceiro aferir se o formulário de envio está enviando corretamente.

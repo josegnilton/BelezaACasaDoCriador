@@ -1,5 +1,5 @@
 describe("A Casa do Criador - HomePage e2e tests", () => {
-  it.skip("Test to assure if the darkmode is working.", () => {
+  it("Test to assure if the darkmode is working.", () => {
     cy.visit("josegnilton.github.io/BelezaACasaDoCriador");
 
     cy.viewport(1300, 900);
@@ -8,7 +8,7 @@ describe("A Casa do Criador - HomePage e2e tests", () => {
     cy.get(".change-theme").click();
     cy.wait(3000);
   }),
-    it.skip("Test to assure if the scrollToTop button is working.", () => {
+    it("Test to assure if the scrollToTop button is working.", () => {
       cy.visit("josegnilton.github.io/BelezaACasaDoCriador");
 
       cy.viewport(1300, 900);
@@ -34,7 +34,7 @@ describe("A Casa do Criador - HomePage e2e tests", () => {
         "Sed viverra volutpat sapien, a facilisis nisi viverra a. Morbi efficitur efficitur urna. Nullam a viverra risus. Sed lacinia mauris eget faucibus lacinia. Aenean et lobortis purus."
       );
 
-      cy.get('.contact__button').click();
+      cy.get('.contact_button').click();
       cy.wait(3000);
     });
 });
