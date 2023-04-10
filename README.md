@@ -9,7 +9,6 @@ O site é de um petshop real, aproveitei a oportunidade do desafio para criar um
 - Carrossel interativo utilizando o Slick Slider como biblioteca para movimentação.
 - Imagens personalizadas tendo dimensões de 1920x600 e 650x600, mudando em javascript para atender ao tamanho da tela e melhorar a responsividade.
 - Form de e-mail funcional utilizando o FormSpree na sua versão gratuíta.
-- Página de produtos com os produtos mais vendidos.
 - Página descontraida mostrando a equipe, sendo ela formada inteiramente por bichos da família.
 - Dark Mode implementado através de Javascript e CSS, usando localstorage para guardar qual a versão a pessoa utiliza.
 - Localização geográfica pelo Google Maps.
