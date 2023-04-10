@@ -22,7 +22,7 @@
   }
 
   .section {
-    padding-top: 8rem;
+    padding-top: 6rem;
   }
 
   .home_container {
@@ -36,7 +36,7 @@
 
   .services_container,
   .menu_container {
-    margin-top: var(--mb-6);
+    margin-top: var(--mb-5);
   }
 
   .menu_container {
@@ -70,6 +70,9 @@
   .about_container,
   .social_media_container {
     column-gap: 7rem;
+  }
+  .home_padding{
+    padding-top: 60px;
   }
 }
 

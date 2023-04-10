@@ -153,9 +153,9 @@ function changeImageCarouselSrc() {
     minhaImagem_2.src = minhaImagem_2.dataset.src;
     minhaImagem_3.src = minhaImagem_3.dataset.src;
   } else {
-    minhaImagem_1.src = 'assets/img/1.png';
-    minhaImagem_2.src = 'assets/img/2.png';
-    minhaImagem_3.src = 'assets/img/3.png';
+    minhaImagem_1.src = 'assets/img/carrossel_1.png';
+    minhaImagem_2.src = 'assets/img/carrossel_2.png';
+    minhaImagem_3.src = 'assets/img/carrossel_3.png';
   }
 }
 
