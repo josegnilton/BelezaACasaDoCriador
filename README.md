@@ -34,3 +34,9 @@ O email pode ser enviado através de um formulário funciona próximo ao footer 
 - Dentro da pasta cypress basta rodar o comando ```npm i``` para instalar as dependências para rodar o cypress. 
 - Após isso é possível rodar o comando ``` npx cypress open```, esse comando irá abrir o "navegador" do cypress. Basta iniciar os testes para ver a mágica acontecendo.
 - Foram testes básicos para garantir a qualidade da homepage: O teste 1 tem o objetivo de aferir se o botão do ScrollTop está funcionando. O segundo se o botão do darkMode está funcionando e o terceiro aferir se o formulário de envio está enviando corretamente.
+
+# Aprendizados do projeto
+- Aprendi a utilizar conceitos responsivos como o "grid-template-columns: repeat();", como minha experiência maior sempre foi com bootstrap, tailwind e etc. Esse projeto me possibilitou evoluir o nível do CSS
+- Consegui desenvolver com a ajuda do slick slider um carrossel, algo que já tinha sido um desafio para mim.
+- Melhorei minha lógica html e javascript, ao pesquisar como desenvolver códigos como o darkmode e o scrollTop.
+- Procurei plataformas que facilitassem o envio de e-mail, sem precisar a criação de um backend.
