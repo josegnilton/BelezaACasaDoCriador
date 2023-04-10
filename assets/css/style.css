@@ -333,6 +333,9 @@ body.dark-theme {
     transform: scale(1);
     transition: transform 0.3s ease-in-out;
 }
+.menu_content_dark {
+    box-shadow: 0 2px 4px white!important;
+}
 
 .section_menu_title {
     padding-top: 40px;

@@ -10,6 +10,10 @@
     transition: transform 0.3s ease-in-out;
 }
 
+.employee_content_dark{
+    box-shadow: 0px 4px 6px white!important;
+}
+
 .employee_content:hover {
     transform: scale(1.10) !important;
 }

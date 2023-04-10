@@ -37,6 +37,12 @@ navLink.forEach((n) => n.addEventListener("click", linkAction));
 // ------------------------------ Início Função para controlar o tema da página ------------------------------
 
 const themeButton = document.getElementById("theme-button");
+const employeeContent_1 = document.getElementById("employee_content_1");
+const employeeContent_2 = document.getElementById("employee_content_2");
+const employeeContent_3 = document.getElementById("employee_content_3");
+const employeeContent_4 = document.getElementById("employee_content_4");
+const employeeContent_5 = document.getElementById("employee_content_5");
+const employeeContent_6 = document.getElementById("employee_content_6");
 const darkTheme = "dark-theme";
 const iconTheme = "bx-sun";
 
@@ -74,7 +80,46 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
   changeImageSrc();
+
+  const prefersDark = getCurrentTheme() === "dark";
+  if (employeeContent_1 !== null) {
+    if (prefersDark) {
+      employeeContent_1.classList.add("employee_content_dark");
+      employeeContent_2.classList.add("employee_content_dark");
+      employeeContent_3.classList.add("employee_content_dark");
+      employeeContent_4.classList.add("employee_content_dark");
+      employeeContent_5.classList.add("employee_content_dark");
+      employeeContent_6.classList.add("employee_content_dark");
+    } else {
+      employeeContent_1.classList.remove("employee_content_dark");
+      employeeContent_2.classList.remove("employee_content_dark");
+      employeeContent_3.classList.remove("employee_content_dark");
+      employeeContent_4.classList.remove("employee_content_dark");
+      employeeContent_5.classList.remove("employee_content_dark");
+      employeeContent_6.classList.remove("employee_content_dark");
+    }
+  }
 });
+
+const prefersDark = getCurrentTheme() === "dark";
+
+if (employeeContent_1 !== null) {
+  if (prefersDark) {
+    employeeContent_1.classList.add("employee_content_dark");
+    employeeContent_2.classList.add("employee_content_dark");
+    employeeContent_3.classList.add("employee_content_dark");
+    employeeContent_4.classList.add("employee_content_dark");
+    employeeContent_5.classList.add("employee_content_dark");
+    employeeContent_6.classList.add("employee_content_dark");
+  } else {
+    employeeContent_1.classList.remove("employee_content_dark");
+    employeeContent_2.classList.remove("employee_content_dark");
+    employeeContent_3.classList.remove("employee_content_dark");
+    employeeContent_4.classList.remove("employee_content_dark");
+    employeeContent_5.classList.remove("employee_content_dark");
+    employeeContent_6.classList.remove("employee_content_dark");
+  }
+}
 
 // ------------------------------ Fim Função para controlar o tema da página ------------------------------
 
@@ -143,28 +188,37 @@ form.addEventListener("submit", (event) => {
 // ------------------------------ Fim Função para controlar o form do e-mail ------------------------------
 
 // ------------------------------ Inicio Função para controlar a imagem do carrossel ------------------------------
-function changeImageCarouselSrc() {
-  const minhaImagem_1 = document.getElementById('minha-imagem_1');
-  const minhaImagem_2 = document.getElementById('minha-imagem_2');
-  const minhaImagem_3 = document.getElementById('minha-imagem_3');
-  const largura = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  if (largura < 950) {
-    minhaImagem_1.src = minhaImagem_1.dataset.src;
-    minhaImagem_2.src = minhaImagem_2.dataset.src;
-    minhaImagem_3.src = minhaImagem_3.dataset.src;
-  } else {
-    minhaImagem_1.src = 'assets/img/carrossel_1.png';
-    minhaImagem_2.src = 'assets/img/carrossel_2.png';
-    minhaImagem_3.src = 'assets/img/carrossel_3.png';
+const minhaImagem_1 = document.getElementById("minha-imagem_1");
+const minhaImagem_2 = document.getElementById("minha-imagem_2");
+const minhaImagem_3 = document.getElementById("minha-imagem_3");
+if(minhaImagem_1 !==null){
+  function changeImageCarouselSrc() {
+    const minhaImagem_1 = document.getElementById("minha-imagem_1");
+    const minhaImagem_2 = document.getElementById("minha-imagem_2");
+    const minhaImagem_3 = document.getElementById("minha-imagem_3");
+    const largura =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+    if (largura < 950) {
+      minhaImagem_1.src = minhaImagem_1.dataset.src;
+      minhaImagem_2.src = minhaImagem_2.dataset.src;
+      minhaImagem_3.src = minhaImagem_3.dataset.src;
+    } else {
+      minhaImagem_1.src = "assets/img/carrossel_1.png";
+      minhaImagem_2.src = "assets/img/carrossel_2.png";
+      minhaImagem_3.src = "assets/img/carrossel_3.png";
+    }
   }
+  
+  window.onload = function () {
+    changeImageCarouselSrc();
+  };
+  
+  window.addEventListener("resize", function () {
+    changeImageCarouselSrc();
+  });
 }
 
-window.onload = function() {
-  changeImageCarouselSrc();
-}
-
-window.addEventListener('resize', function() {
-  changeImageCarouselSrc();
-});
 
 // ------------------------------ Fim Função para controlar a imagem do carrossel ------------------------------
